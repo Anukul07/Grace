@@ -4,10 +4,76 @@
  */
 package ControllerOfLogin;
 
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.sql.Connection;
+import ViewOfLogin.*;
+import ModelOfLogin.*;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+
 /**
  *
  * @author anukul
  */
 public class LoginController {
+    LoginView logview;
+    LoginModel logmod;
+    ResultSet rs;
+    Statement stmt;
+    public LoginController(LoginView logview){
+        this.logview=logview;
+        logview.addLoginListener(new LoginListener());
+    }
+    class LoginListener implements ActionListener{
+        
+       
+        @Override
+        public void actionPerformed(ActionEvent e){
+            
+            try{
+                logmod=logview.getUser();   
+                if(checkUser(logmod)){       
+                    logview.setMessage("login successfully");
+                }
+                else{
+                    logview.setMessage("invalid user");
+                    
+                }
+                           
+        
+            }
+            catch(Exception e1){
+                System.out.println(e1.getMessage());
+                
+            }
+        }
+         public boolean checkUser(LoginModel user) throws Exception{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/gracedb","root","ishiki123");
+            String query="select * from registration where email='"+user.getEmail()+"' AND Passwd='"+user.getPassword()+"'";
+            try{
+                stmt=conn.createStatement();
+                rs=stmt.executeQuery(query);
+                if (rs.next()){
+                    return true;
+                }
+                conn.close();
+                
+            }
+            catch(Exception e2){
+                System.out.println(e2.getMessage());
+                
+            }
+           return false;
+         }
+
+
+    }
+    
     
 }
+

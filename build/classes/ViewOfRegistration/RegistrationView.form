@@ -23,12 +23,16 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" pref="1411" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
@@ -59,7 +63,7 @@
                                   <Component id="ClinicName2" min="-2" pref="196" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="219" max="-2" attributes="0"/>
                                   <Component id="Registration" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="514" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -74,13 +78,15 @@
                           </Group>
                           <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="NameText" min="-2" pref="488" max="-2" attributes="0"/>
-                              <Component id="ContactText" min="-2" pref="488" max="-2" attributes="0"/>
-                              <Component id="EmailText" min="-2" pref="488" max="-2" attributes="0"/>
-                              <Component id="PasswordText" min="-2" pref="488" max="-2" attributes="0"/>
-                              <Component id="ConfirmPasswordText" min="-2" pref="488" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="NameText" pref="488" max="32767" attributes="0"/>
+                                  <Component id="ContactText" pref="488" max="32767" attributes="0"/>
+                                  <Component id="EmailText" pref="488" max="32767" attributes="0"/>
+                                  <Component id="PasswordText" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="confirmPass" min="-2" pref="488" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="222" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -102,7 +108,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="550" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="337" max="-2" attributes="0"/>
+                  <Component id="RegisterBtn" min="-2" pref="337" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -148,21 +154,21 @@
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Password" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
-                      <Component id="PasswordText" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="ConfirmPassword" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="ConfirmPasswordText" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="PasswordText" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="ConfirmPassword" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="confirmPass" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="AlreadyAMember" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="LoginButton" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="50" max="-2" attributes="0"/>
-                  <EmptySpace pref="203" max="32767" attributes="0"/>
+                  <Component id="RegisterBtn" min="-2" pref="50" max="-2" attributes="0"/>
+                  <EmptySpace pref="198" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -248,20 +254,6 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="PasswordText">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="d8" green="e6" red="df" type="rgb"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JPasswordField" name="ConfirmPasswordText">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="d8" green="e6" red="df" type="rgb"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="Logo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -312,7 +304,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="RegisterBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="73" green="94" red="5f" type="rgb"/>
@@ -325,6 +317,23 @@
             </Property>
             <Property name="text" type="java.lang.String" value="REGISTER"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegisterBtnActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="confirmPass">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d8" green="e6" red="df" type="rgb"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="PasswordText">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d8" green="e6" red="df" type="rgb"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>
